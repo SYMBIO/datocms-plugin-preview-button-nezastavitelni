@@ -33,31 +33,33 @@ window.DatoCmsPlugin.init((plugin) => {
 
     switch (plugin.itemType.id) {
       case '183326':
-      case '197023':
-        // eslint-disable-next-line no-case-declarations
+      case '197023': {
         const type = plugin.getFieldValue('advert_type');
         switch (type) {
           case '2123605':
           case '3161879':
             // offer
-            path = locale === 'sk' ? 'aktivity/ponuka/' : 'aktivity/nabidka';
+            path = locale === 'sk' ? 'aktivity/ponuka' : 'aktivity/nabidka';
             break;
           case '2123606':
           case '3161876':
             // inquiry
-            path = locale === 'sk' ? 'aktivity/dopyt/' : 'aktivity/poptavka';
+            path = locale === 'sk' ? 'aktivity/dopyt' : 'aktivity/poptavka';
             break;
           default:
             break;
         }
         window.open(`${baseUrl}/${path}/${slug}`);
         break;
+      }
 
       case '?':
-      case '197903':
+      case '197903': {
         path = locale === 'sk' ? 'clanky-a-galeria' : 'clanky-a-galerie';
-        window.open(`${baseUrl}/${path}/${slug}`);
+        const suffix = locale === 'sk' ? 'nahlad' : 'nahled';
+        window.open(`${baseUrl}/${path}/${slug}/${suffix}`);
         break;
+      }
 
       default:
         break;
