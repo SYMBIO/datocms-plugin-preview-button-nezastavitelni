@@ -9,7 +9,7 @@
   "description": "Preview button for Birell Nezastavitelni",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"yarn dev\" \"yarn localtunnel\"",
+    "start": "concurrently \"npm run dev\" \"npm run localtunnel\"",
     "localtunnel": "lt -s datocms-plugin-preview-button-nezastavitelni -h https://tunnel.datahub.at --port 5000",
     "dev": "NODE_ENV=development webpack-dev-server --port 5000",
     "dist": "NODE_ENV=production webpack --progress",
@@ -80,5 +80,7 @@
     "webpack-dev-server": "^3.1.10",
     "yo": "^2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "serialize-javascript": "^2.1.2"
+  }
 }

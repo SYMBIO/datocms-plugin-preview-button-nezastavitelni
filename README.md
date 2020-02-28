@@ -17,13 +17,13 @@ npm install
 Add this plugin in development mode to one of your DatoCMS project with:
 
 ```
-yarn addToProject
+npm run saddToProject
 ```
 
 Start the local development server with:
 
 ```
-yarn start
+npm run sstart
 ```
 
 The plugin will be served from [https://datocms-plugin-preview-button-nezastavitelni.tunnel.datahub.at/](https://datocms-plugin-preview-button.tunnel.datahub.at/). Insert this URL as the plugin [Entry point URL](https://www.datocms.com/docs/plugins/creating-a-new-plugin/).
@@ -39,5 +39,5 @@ Before publishing this plugin, make sure:
 When everything's ready, just run:
 
 ```
-yarn publish
+npm run spublish
 ```

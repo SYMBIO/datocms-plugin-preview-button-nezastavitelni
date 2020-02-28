@@ -13,7 +13,7 @@ window.DatoCmsPlugin.init((plugin) => {
   button.className = 'DatoCMS-button DatoCMS-button--primary';
   button.onclick = (e) => {
     let locale = plugin.getFieldValue('language');
-    switch(locale) {
+    switch (locale) {
       case '2123837':
       case '3162084':
         locale = 'cs';
@@ -24,6 +24,8 @@ window.DatoCmsPlugin.init((plugin) => {
         locale = 'sk';
         baseUrl = baseUrl.replace('{locale}', 'sk');
         break;
+      default:
+        break;
     }
 
     const slug = plugin.getFieldValue('slug');
@@ -32,8 +34,9 @@ window.DatoCmsPlugin.init((plugin) => {
     switch (plugin.itemType.id) {
       case '183326':
       case '197023':
-        let type = plugin.getFieldValue('advert_type');
-        switch(locale) {
+        // eslint-disable-next-line no-case-declarations
+        const type = plugin.getFieldValue('advert_type');
+        switch (type) {
           case '2123605':
           case '3161879':
             // offer
@@ -43,6 +46,8 @@ window.DatoCmsPlugin.init((plugin) => {
           case '3161876':
             // inquiry
             path = locale === 'sk' ? 'aktivity/dopyt/' : 'aktivity/poptavka';
+            break;
+          default:
             break;
         }
         window.open(`${baseUrl}/${path}/${slug}`);
