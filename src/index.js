@@ -53,7 +53,7 @@ window.DatoCmsPlugin.init((plugin) => {
         break;
       }
 
-      case '?':
+      case '200909':
       case '197903': {
         path = locale === 'sk' ? 'clanky-a-galeria' : 'clanky-a-galerie';
         const suffix = locale === 'sk' ? 'nahlad' : 'nahled';
